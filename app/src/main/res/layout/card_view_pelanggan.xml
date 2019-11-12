@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/layout_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:background="@drawable/bg_cv"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/post_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_person_black_24dp" />
+
+        <TextView
+            android:id="@+id/cv_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_toRightOf="@id/post_image"
+            android:text="Name"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cv_jabatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cv_nama"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_toRightOf="@id/post_image"
+            android:text="Bagian"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/cv_no_hp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cv_jabatan"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_toRightOf="@id/post_image"
+            android:text="Lokasi"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

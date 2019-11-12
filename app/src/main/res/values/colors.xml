@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="primary_light">#BBDEFB</color>
+    <color name="colorAccent">#00BCD4</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_greyish">#EEEEEE</color>
+    <color name="button_selectorcolor">#9E9E9E</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="hijau_muda">#8DE68A</color>
+    <color name="hijau_agak_tua">#3A8138</color>
+    <color name="merah_muda">#FF7777</color>
+    <color name="merah">#FF0000</color>
+    <color name="bg_admin">#E6E4E4E4</color>
+</resources>
