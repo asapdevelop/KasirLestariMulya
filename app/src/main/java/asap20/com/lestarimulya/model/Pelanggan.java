@@ -1,6 +1,6 @@
 package asap20.com.lestarimulya.model;
 
-public class Customer {
+public class Pelanggan {
 
     private int id;
     private String nama;
@@ -8,10 +8,10 @@ public class Customer {
     private double totalTabungan;
     private double totalHutang;
 
-    public Customer() {
+    public Pelanggan() {
     }
 
-    public Customer(int id, String nama, String alamat, double totalTabungan, double totalHutang) {
+    public Pelanggan(int id, String nama, String alamat, double totalTabungan, double totalHutang) {
         this.id = id;
         this.nama = nama;
         this.alamat = alamat;

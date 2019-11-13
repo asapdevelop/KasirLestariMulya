@@ -11,13 +11,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import asap20.com.lestarimulya.model.Barang;
+import asap20.com.lestarimulya.model.Pelanggan;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "KasirLestariMulya.db";
     public static final String DATABASE_LOCATION = "/data/data/asap20.com.lestarimulya/databases/";
     public static final int DATABASE_VERSION = 1;
-    public static final String TABLE_NAME = "Customer";
+    public static final String TABLE_NAME = "Pelanggan";
     private Context context;
     private SQLiteDatabase db;
 
@@ -79,7 +80,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return hargaBarang;
     }
 
-    //Customer
+    //Pelanggan
+
+    public List<Pelanggan> getListPelanggan (){
+        Pelanggan pelanggan = null;
+        List<Pelanggan> pelangganList = new ArrayList<>();
+        openDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM customer", null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            pelanggan = new Pelanggan(cursor.getInt(0),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getDouble(3),
+                    cursor.getDouble(4));
+            pelangganList.add(pelanggan);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return pelangganList;
+    }
 
 
     //Tabungan

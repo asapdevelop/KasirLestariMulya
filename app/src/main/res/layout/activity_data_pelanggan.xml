@@ -30,10 +30,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <androidx.recyclerview.widget.RecyclerView
+            <ListView
+                android:id="@+id/list_pelanggan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/rv_pinjaman"/>
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
         </ScrollView>
     </LinearLayout>
 
