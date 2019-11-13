@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">LestariMulya</string>
+    <string name="title_activity_penjualan">PenjualanActivity</string>
 </resources>

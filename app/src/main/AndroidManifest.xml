@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TarikTabunganActivity"></activity>
+        <activity
+            android:name=".PenjualanActivity"
+            android:label="@string/title_activity_penjualan"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".TarikTabunganActivity" />
         <activity android:name=".DetailPelanggan" />
         <activity android:name=".BayarHutangActivity" />
         <activity android:name=".DataPelangganActivity" />
