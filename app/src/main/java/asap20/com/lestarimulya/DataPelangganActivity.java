@@ -30,10 +30,13 @@ import asap20.com.lestarimulya.database.DatabaseHelper;
 import asap20.com.lestarimulya.model.Pelanggan;
 
 public class DataPelangganActivity extends AppCompatActivity {
+    private static final String TAG = "DataPelangganActivity";
+
     List<Pelanggan> pelangganList;
     private DatabaseHelper dbHelper;
     protected Cursor cursor;
     String[] daftar;
+    String[] uid;
     ListView listPelanggan;
 
     RecyclerView recyclerView;
@@ -59,10 +62,12 @@ public class DataPelangganActivity extends AppCompatActivity {
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         cursor = db.rawQuery("SELECT * FROM customer", null);
         daftar = new String[cursor.getCount()];
+        uid = new String[cursor.getCount()];
         cursor.moveToFirst();
         for (int cc=0; cc < cursor.getCount(); cc++){
             cursor.moveToPosition(cc);
             daftar[cc] = cursor.getString(1).toString();
+            uid[cc] = cursor.getString(0);
         }
         listPelanggan = findViewById(R.id.list_pelanggan);
         listPelanggan.setAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, daftar));
@@ -72,7 +77,9 @@ public class DataPelangganActivity extends AppCompatActivity {
 
 
             public void onItemClick(AdapterView arg0, View arg1, int arg2, long arg3) {
-                final String selection = daftar[arg2]; //.getItemAtPosition(arg2).toString();
+                Log.d(TAG, "onItemClick: " + arg2);
+                final String selection = uid[arg2]; //.getItemAtPosition(arg2).toString();
+                Log.d(TAG, "onItemClick: " + selection);
                 final CharSequence[] dialogitem = {"Lihat Biodata", "Pembelian", "Hapus Biodata"};
                 AlertDialog.Builder builder = new AlertDialog.Builder(DataPelangganActivity.this);
                 builder.setTitle("Pilihan");
@@ -81,12 +88,12 @@ public class DataPelangganActivity extends AppCompatActivity {
                         switch(item){
                             case 0 :
                                 Intent i = new Intent(getApplicationContext(), DetailPelanggan.class);
-                                i.putExtra("NAMA", selection);
+                                i.putExtra("ID", selection);
                                 startActivity(i);
                                 break;
                             case 1 :
                                 Intent in = new Intent(getApplicationContext(), Transaksi.class);
-                                in.putExtra("nama", selection);
+                                in.putExtra("ID", selection);
                                 startActivity(in);
                                 break;
                             case 2 :

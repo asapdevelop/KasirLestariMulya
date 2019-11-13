@@ -14,7 +14,7 @@ import asap20.com.lestarimulya.database.DatabaseHelper;
 public class DetailPelanggan extends AppCompatActivity {
 
     protected Cursor cursor;
-    MaterialEditText tvAlamat, tvTabungan, tvHutang;
+    MaterialEditText tvAlamat, tvTabungan, tvHutang, tvNoHp;
     TextView tvNama;
     DatabaseHelper dbHelper;
 
@@ -28,10 +28,11 @@ public class DetailPelanggan extends AppCompatActivity {
         tvAlamat = findViewById(R.id.detail_alamat);
         tvTabungan = findViewById(R.id.detail_tabungan);
         tvHutang = findViewById(R.id.detail_hutang);
+        tvNoHp = findViewById(R.id.detail_no_hp);
 
         SQLiteDatabase db = dbHelper.getReadableDatabase();
-        cursor = db.rawQuery("SELECT * FROM customer WHERE nama = '" +
-                getIntent().getStringExtra("NAMA") + "'", null);
+        cursor = db.rawQuery("SELECT * FROM customer WHERE id = '" +
+                getIntent().getStringExtra("ID") + "'", null);
         cursor.moveToFirst();
         if (cursor.getCount()>0){
             cursor.moveToPosition(0);
