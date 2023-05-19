@@ -11,16 +11,16 @@ Fitur-fitur yang ada pada aplikasi ini adalah :
 Berikut merupakan hasil tangkap layar aplikasi:
 
 **Halaman Login**
-![Login](https://github.com/asapdevelop/LestariMulya/assets/52349950/033f86b6-db0c-43bf-81a2-10517e07c3a0)
+![Login](https://github.com/asapdevelop/KasirLestariMulya/assets/52349950/710f0a41-a624-4269-8618-ba593d6e0bda)
 
 
 **Halaman Portal Admin** 
-![Portal Admin](https://github.com/asapdevelop/LestariMulya/assets/52349950/098998e0-21a8-414e-af02-57a47f5a8d93)
+![Portal Admin](https://github.com/asapdevelop/KasirLestariMulya/assets/52349950/59585d3b-f928-4ff1-9b1b-bb2756d88a95)
 
 
 **Halaman Data Penjualan**
-![Data Penjualan](https://github.com/asapdevelop/LestariMulya/assets/52349950/ee39a6de-447c-49ad-870d-f54f6977b39b)
+![Data Penjualan](https://github.com/asapdevelop/KasirLestariMulya/assets/52349950/0f639235-666e-4037-be3b-f855f6109269)
 
 
 **Halaman Pembelian**
-![Pembelian](https://github.com/asapdevelop/LestariMulya/assets/52349950/d95278ea-e734-4e2d-bb1a-3b8e65bec029)
+![Pembelian](https://github.com/asapdevelop/KasirLestariMulya/assets/52349950/a58f9563-46cf-4ac7-8f02-de904fade2fc)
